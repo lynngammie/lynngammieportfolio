@@ -9,41 +9,50 @@
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
   <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
   <?php endif; ?>
 <div class="full-page" style="background-image:url(<?php echo $image[0]; ?>)">
+  <div class="full-page-overlay">
 
-<header>
-  
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
-    <h2><?php bloginfo('description'); ?> 
+<div class="container">
+  <header>
 
-        <?php if (get_field('lynn_is')): ?>
-          <?php $count = 1; $classes = array(); ?>
-          <?php while(the_repeater_field('lynn_is')): ?>
-            <span class="word-master word-gallery<?= $count ?>"><?php the_sub_field('lynn_word'); ?></span>
-            <?php array_push($classes, "word-gallery".$count) ?>
-            <?php $count++ ?>
-          <?php endwhile; ?>
-        <?php endif; ?>
+    <div class="flex-container">
+      <div class="main-head">
+      <h1>
+        <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+          <?php bloginfo( 'name' ); ?>
+        </a>
+      </h1>
+      <h2><?php bloginfo('description'); ?> 
 
-    </h2>
+          <?php if (get_field('lynn_is')): ?>
+            <?php $count = 1; $classes = array(); ?>
+            <?php while(the_repeater_field('lynn_is')): ?>
+              <span class="word-master word-gallery<?= $count ?>"><?php the_sub_field('lynn_word'); ?></span>
+              <?php array_push($classes, "word-gallery".$count) ?>
+              <?php $count++ ?>
+            <?php endwhile; ?>
+          <?php endif; ?>
+      </h2>
+      <?php if (get_field('grid_creatures')): ?>
+      <?php $number = 1; $classnames = array(); ?>
+      <?php while(the_repeater_field('grid_creatures')): ?>
+        <img class="grid grid-gallery<?= $number ?>" src="<?php the_sub_field('grid_creature'); ?>"></img>
+        <?php array_push($classnames, "grid-gallery".$number) ?>
+        <?php $number++ ?>
+      <?php endwhile; ?>
+    <?php endif; ?>
 
+    </div>
+  </div>
 
-    
-    
-  </div> <!-- /.container -->
-
-  
-
-</header><!--/.header-->
+  </header><!--/.header-->
+</div> <!-- /.container -->
+</div>
 
 <style>
       /*<?php $position = 0; ?>

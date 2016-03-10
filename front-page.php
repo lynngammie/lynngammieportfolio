@@ -10,6 +10,8 @@
   	</div>
   	<div class="about-image">
   		<img src="<?php the_field('profile_picture');?>" alt="">
+  		<img style="width:50%" src="<?php the_field('submarine')?>" alt="">
+  		<img style="width:50%" src="<?php the_field('shrimp')?>" alt="">
   	</div>
 
     <div class="skills">
@@ -73,7 +75,12 @@
 
     <div class="contact">
     	<div class="contact-image">
-    		<?php the_field('contact_image'); ?>
+    		
+				<?php $image = get_field('contact_image');
+					if( !empty($image) ): ?>
+					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+				<?php endif; ?>
+
     	</div>
     	<div class="contact-form">
     		<?php the_field('contact_form'); ?>

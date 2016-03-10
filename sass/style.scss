@@ -23,6 +23,7 @@ $yellow: #FFA000;
 $brightyellow: #FFC107;
 $blue: #054459;
 $lightblue: #6697A2;
+$headerOverlay: rgba(2,27,35,0.8);
 $mainfont: 'Montserrat', sans-serif;
 $secondfont: 'Cardo', serif;
 
@@ -31,7 +32,7 @@ img {
 }
 
 body {
-	
+	font-size:62.5%;
 }
 
 //Header Styles
@@ -42,12 +43,80 @@ body {
 }
 
 .full-page	{
-	width:100%;
 	background-size:cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height:100vh;
 }
+
+.full-page-overlay {
+	background:$headerOverlay;
+}
+
+.flex-container {
+	display:flex;
+	flex-direction:column;
+	height:100vh;
+	.main-head {
+		width:80%;
+		margin:auto;
+		text-align:center;
+	}
+}
+
+h1 a, h2 {
+	color:$brightyellow;
+}
+
+h1 {
+	font-family:$mainfont;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size:3rem;
+	margin-bottom:0;
+}
+
+h2, p {
+	font-family:$secondfont;
+}
+
+//word Gallery styles
+
+.word-master {
+	display:none;
+}
+
+//creature gallery styles
+
+.grid {
+	position:fixed;
+}
+
+.grid-gallery1 {
+	width:30%;
+	bottom:0;
+	left:5%;
+}
+
+.grid-gallery2 {
+	width:30%;
+	bottom:0;
+	right:5%;
+}
+
+.grid-gallery3 {
+	width:30%;
+	top:5%;
+	left:10%;
+}
+
+.grid-gallery4 {
+	width:32%;
+	top:5%;
+	right:20%;
+}
+
+
 
 
 

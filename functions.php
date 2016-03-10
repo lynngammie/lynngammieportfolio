@@ -309,3 +309,9 @@ function lynn_get_thumbnail_alt($post) {
 	$alt = wp_get_post_meta($imageID);
 	return $alt;
 }
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

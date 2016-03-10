@@ -15,5 +15,14 @@
 
 <?php wp_footer(); ?>
 </div>
+
+<?php if (get_field('sea_creatures')): ?>
+      <?php $number = 1; $classnames = array(); ?>
+      <?php while(the_repeater_field('sea_creatures')): ?>
+        <img class="creature creature-gallery<?= $number ?>" src="<?php the_sub_field('sea_creature'); ?>"></img>
+        <?php array_push($classnames, "word-gallery".$number) ?>
+        <?php $number++ ?>
+      <?php endwhile; ?>
+    <?php endif; ?>
 </body>
 </html>
