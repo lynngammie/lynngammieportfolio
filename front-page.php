@@ -60,8 +60,8 @@
 	    	    		 <?php $thumbnail_id = get_post_thumbnail_id( $post->ID );
 	    	    		 $alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);?>
 	    	    	<?php endif; ?>
-
-    	    		<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt; ?>">
+							<a href="<?php the_field('link')?>">
+    	    		<img src="<?php echo $image[0]; ?>" alt="<?php echo $alt; ?>"></a>
     	    	</div>
     	    </div>
 
@@ -72,7 +72,21 @@
     </div>  <!-- /portfolio -->
 
     <div class="contact">
-    	
+    	<div class="contact-image">
+    		<?php the_field('contact_image'); ?>
+    	</div>
+    	<div class="contact-form">
+    		<?php the_field('contact_form'); ?>
+    	</div>
+    	<div class="contact-fields">
+    		<div class="field">
+    			<?php while(has_sub_field('contact_info')): ?>
+    				<a href="<?php the_sub_field('contact_link'); ?>">
+    					<p><?php the_sub_field('contact_icon') ?> <?php the_sub_field('contact_item') ?></p>
+    				</a>
+    	    <?php endwhile ?>
+    		</div>
+    	</div>
     </div>
 
   </div> <!-- /.container -->
