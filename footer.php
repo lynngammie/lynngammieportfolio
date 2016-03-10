@@ -1,6 +1,6 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <p>&copy; Lynn Gammie <?php echo date('Y'); ?></p>
   </div>
 </footer>
 
@@ -14,5 +14,6 @@
 </script>
 
 <?php wp_footer(); ?>
+</div>
 </body>
 </html>

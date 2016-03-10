@@ -46,7 +46,12 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('devicons', 'https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css');
+
+	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic');
 }
+
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
 /* Add all our JavaScript files here.
@@ -64,6 +69,22 @@ function hackeryou_scripts() {
   	null, //version number
   	true //load in footer
   );
+
+  wp_enqueue_script(
+      'masonry', //handle
+      get_template_directory_uri() . '/js/masonry.pkgd.min.js', //source
+      false, //dependencies
+      null, // version number
+      true //load in footer
+    );
+
+  wp_enqueue_script(
+      'flickity', //handle
+      get_template_directory_uri() . '/js/flickity.pkgd.min.js', //source
+      false, //dependencies
+      null, // version number
+      true //load in footer
+    );
 
   wp_enqueue_script(
     'plugins', //handle
@@ -275,4 +296,16 @@ function get_post_parent($post) {
 	else {
 		return $post->ID;
 	}
+}
+
+function lynn_get_thumbnail_url($post) {
+    $imageID = get_post_thumbnail_id($post->ID);
+    $imageURL = wp_get_attachment_URL($imageID);
+    return $imageURL;
+}
+
+function lynn_get_thumbnail_alt($post) {
+	$imageID = get_post_thumbnail_id($post->ID);
+	$alt = wp_get_post_meta($imageID);
+	return $alt;
 }

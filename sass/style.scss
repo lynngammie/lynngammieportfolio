@@ -19,27 +19,34 @@ Default Styling
 ====================================
 */
 
+$yellow: #FFA000;
+$brightyellow: #FFC107;
+$blue: #054459;
+$lightblue: #6697A2;
+$mainfont: 'Montserrat', sans-serif;
+$secondfont: 'Cardo', serif;
+
 img {
 	max-width: 100%;
 }
 
 body {
-	color: #333;
+	
 }
+
+//Header Styles
 
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 }
 
-.content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
-}
-
-.full {
-	width: 100%;
+.full-page	{
+	width:100%;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height:100vh;
 }
 
 
