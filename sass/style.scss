@@ -23,6 +23,7 @@ $yellow: #FFA000;
 $brightyellow: #FFC107;
 $blue: #054459;
 $lightblue: #6697A2;
+$grey:#F8F8F8;
 $headerOverlay: rgba(2,27,35,0.8);
 $mainfont: 'Montserrat', sans-serif;
 $secondfont: 'Source Sans Pro', sans-serif;
@@ -286,12 +287,125 @@ i {
 	display:flex;
 }
 
+.contact-text {
+	width:60%;
+	padding:40px;
+	font-size:1rem;
+	background:$grey;
+}
+
+input, textarea {
+		border:none;
+		padding:6px;
+	}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+	color: $lightblue;
+}
+
+input[type=submit]{
+	color:$lightblue;
+}
+
 .contact-image {
 	width:40%;
 	background:$lightblue;
 	padding:20px;
 }
 
+.contact-form {
+	width:80%;
+	margin:0 auto;
+}
+
+.form-top {
+	display:flex;
+	width:100%;
+}
+
+.email, .name {
+	width:48%;
+	input {
+		width:100%;
+	}
+}
+
+.email, .name, .subject {
+	margin-bottom:0;
+}
+
+.email {
+	margin-left:4%;
+}
+
+.subject {
+	input {
+		width:100%;
+	}
+}
+
+.message {
+	textarea {
+		width:100%;
+	}
+}
+
+.submit {
+	text-align:right;
+	input {
+		width:80px;
+		background:white;
+		border:1px solid $lightblue;
+	}
+}
+
+img.ajax-loader {
+	display:none;
+}
+
+div.wpcf7-response-output {
+	margin:0;
+	padding:0;
+}
+
+.wpcf7-mail-sent-ok, .wpcf7-validation-errors, span.wpcf7-not-valid-tip {
+	border:none !important;
+	font-size:0.8rem;
+	color:$lightblue;
+	font-family:$secondfont;
+}
+
+.contact-email {
+	width:80%;
+	margin:20px auto;
+	p {
+		margin:0;
+		text-align:center;
+		a {
+			color:$lightblue;
+		}
+	}
+}
+
+.contact-fields {
+	width:60%;
+	margin:0 auto;
+	display:flex;
+	justify-content:space-around;
+}
+
+.field {
+	font-family:$secondfont;
+	a {
+		color:$lightblue;
+	}
+	p {
+		display:none;
+	}
+	i {
+		font-size: 1.6rem;
+	}
+}
 
 
 //footer 

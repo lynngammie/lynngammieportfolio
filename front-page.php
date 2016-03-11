@@ -104,6 +104,7 @@
 
 
     <div class="contact">
+
     	<div class="contact-image">
     		
 				<?php $image = get_field('contact_image');
@@ -116,14 +117,20 @@
 	    	<div class="contact-form">
 	    		<?php the_field('contact_form'); ?>
 	    	</div>
+	    	<div class="contact-email">
+	    		<p>Or send me a note at <?php the_field('contact_email'); ?></p>
+	    	</div>
 	    	<div class="contact-fields">
-	    		<div class="field">
 	    			<?php while(has_sub_field('contact_info')): ?>
+	    				<div class="field">
 	    				<a href="<?php the_sub_field('contact_link'); ?>">
-	    					<p><?php the_sub_field('contact_icon') ?> <?php the_sub_field('contact_item') ?></p>
+	    				<?php the_sub_field('contact_icon') ?>
 	    				</a>
+	    				<a href="<?php the_sub_field('contact_link'); ?>">
+	    				<p><?php the_sub_field('contact_item') ?></p>
+	    				</a>
+	    				</div>
 	    	    <?php endwhile ?>
-	    		</div>
 	    	</div>
 	    </div>
     </div>

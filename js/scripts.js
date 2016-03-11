@@ -11,6 +11,7 @@ $(function(){
 	var words = $(".word-master");
   var wordIndex = -1;
   
+  //add one to word index, 
   function showNextQuote() {
       ++wordIndex;
       words.eq(wordIndex % words.length)
