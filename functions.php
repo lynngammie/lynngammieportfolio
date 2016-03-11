@@ -49,7 +49,7 @@ function hackeryou_styles(){
 
 	wp_enqueue_style('devicons', 'https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css');
 
-	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic');
+	wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Cardo:400,400italic|Source+Sans+Pro:400,400italic');
 }
 
 
@@ -104,6 +104,7 @@ function hackeryou_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
+
 
 
 /* Custom Title Tags */

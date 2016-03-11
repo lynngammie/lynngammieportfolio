@@ -28,7 +28,7 @@
         </a>
       </h1>
       <h2><?php bloginfo('description'); ?> 
-
+          <span class="word-box">
           <?php if (get_field('lynn_is')): ?>
             <?php $count = 1; $classes = array(); ?>
             <?php while(the_repeater_field('lynn_is')): ?>
@@ -37,6 +37,7 @@
               <?php $count++ ?>
             <?php endwhile; ?>
           <?php endif; ?>
+        </span>
       </h2>
       <?php if (get_field('grid_creatures')): ?>
       <?php $number = 1; $classnames = array(); ?>
