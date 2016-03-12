@@ -72,9 +72,10 @@
     	<?php if ($portfolioQuery-> have_posts()): ?>
     	  <?php while($portfolioQuery-> have_posts()): ?>
     	    <?php $portfolioQuery->the_post(); ?>
-    	    <div class="portfolio-item">
+    	    <div class="portfolio-item clearfix">
     	    	<div class="portfolio-text">
 	    	    	<h4><?php the_title(); ?></h4>
+	    	    	<p class="details">Details</p>
 	    	    	<p class="porfolio-text"><?php the_content(); ?></p>
     	    	</div>
     	    	<div class="portfolio-image">
@@ -107,15 +108,6 @@
 
     <div class="contact">
 
-    	<div class="contact-image">
-    		
-				<?php $image = get_field('contact_image');
-					if( !empty($image) ): ?>
-					<img class="sub" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-				<?php endif; ?>
-				<img class="prop" src="<?php the_field('contact_image_2'); ?>" alt="">
-
-    	</div>
     	<div class="contact-text">
 	    	<div class="contact-form">
 	    		<?php the_field('contact_form'); ?>
@@ -136,6 +128,17 @@
 	    	    <?php endwhile ?>
 	    	</div>
 	    </div>
+
+	    <div class="contact-image">
+	    	<div class="sub">
+					<?php $image = get_field('contact_image');
+						if( !empty($image) ): ?>
+						<img class="sub" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<?php endif; ?>
+					<img class="prop" src="<?php the_field('contact_image_2'); ?>" alt="">
+				</div>
+    	</div>
+
     </div>
 
 

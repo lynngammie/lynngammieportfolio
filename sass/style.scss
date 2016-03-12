@@ -305,7 +305,17 @@ i {
 	border:4px solid $brightyellow;
 	margin-top:25px;
 	margin-right:-25px;
-	z-index:5;
+	z-index:1;
+	.details {
+		display:none;
+		text-transform:uppercase;
+		color:$brightyellow;
+		font-size:1rem;
+		padding:2px;
+		margin:10px 0;
+		text-align:center;
+		border:1px solid$brightyellow;
+	}
 }
 
 .portfolio-item:nth-child(even) > .portfolio-text {
@@ -345,6 +355,7 @@ input[type=submit]{
 }
 
 .contact-image {
+	display:flex;
 	width:40%;
 	background:$lightblue;
 	padding:20px;
@@ -406,7 +417,6 @@ input[type=submit]{
 }
 
 .submit {
-	text-align:right;
 	input {
 		width:80px;
 		background:white;
@@ -465,6 +475,10 @@ div.wpcf7-response-output {
 //Media Queries 
 
 @media (max-width: 840px) {
+
+	.about-text {
+		width:90%;
+	}
 	
 	.skills-items {
 		display:block;
@@ -503,12 +517,127 @@ div.wpcf7-response-output {
 		transition:all 0.5s ease;
 	}
 
+}
 
 
+@media (max-width: 768px) {
+
+	.about-image {
+		width:50%;
+	}
+
+	.about-text-container {
+		width:50%;
+	}
+
+	.portfolio-item {
+		display:block;
+		// clear:both;
+	}
+
+	.portfolio-text {
+		width:100%;
+		z-index:6;
+	}
+
+	.portfolio-image {
+		width:70%;
+		margin-top:-25px;
+		margin-left:25px;
+	}
+
+	.portfolio-item:nth-child(even) > .portfolio-text {
+		margin-left:0;
+  	padding:20px 30px;
+	}
+
+	.portfolio-item:nth-child(even) > .portfolio-image {
+		float:right;
+		margin-right:25px;
+	}
+
+	.contact-form, .contact-email {
+		width:100%;
+	}
 
 
 }
 
+@media (max-width: 621px) {
+
+	.about {
+		display:block;
+	}
+
+	.about-image, .about-text-container {
+		width:100%;
+	}
+
+	.about-text-container {
+		padding:20px;
+	}
+
+	.portfolio-image {
+		width:80%;
+	}
+
+	.contact {
+		display:block;
+	}
+
+	.contact-image, .contact-text {
+		width:100%;
+	}
+
+}
+
+@media (max-width: 480px) {
+	
+	h4 {
+		font-size:1.4rem;
+	}
+
+	.portfolio-item {
+		border:4px solid $brightyellow;
+		margin-top:20px;
+		padding-top:0;
+	}
+
+	.portfolio-image {
+		width:100%;
+		padding:0 10px 10px 10px;
+		box-shadow:none;
+		margin:0;
+	}
+
+	.portfolio-text {
+		border:none;
+		margin:0;
+		padding:10px 10px;
+		.details {
+			display:block;
+		}
+		p {
+			display:none;
+			font-size:1rem;
+			margin:0;
+		}
+	}
+
+	.portfolio-item:nth-child(even)>.portfolio-text {
+		padding:10px 10px;
+	}
+
+	.portfolio-item:nth-child(even)>.portfolio-image {
+		margin:0;
+	}
+
+	.contact-image, .contact-text {
+		padding:20px;
+	}
+
+
+}
 
 
 

@@ -9,13 +9,16 @@ $(function(){
 		$(this).removeClass('active');
 		$(this).find('.skills-other').slideUp();
 	}
-		
-		// if (!$(this).hasClass('active')) {
-		// 	$('.active').removeClass('active').next().slideUp();
-		// 	$(this).addClass('active').next().slideDown('slow');
-		// } else {
-		// 	$(this).removeClass('active').next().slideUp();
-		// }
+	});
+
+	$('.details').on('click', function(){
+		if (!$(this).hasClass('slide-details')) {
+		$(this).siblings().slideDown();
+		$(this).addClass('slide-details');
+	} else {
+		$(this).removeClass('slide-details');
+		$(this).nextAll().slideUp();
+	}
 	});
 
 	$(window).scroll(function(event) {
