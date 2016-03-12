@@ -332,6 +332,7 @@ i {
 
 .contact {
 	display:flex;
+	background:$lightblue;
 }
 
 .contact-text {
@@ -356,10 +357,15 @@ input[type=submit]{
 
 .contact-image {
 	display:flex;
+	margin:auto;
 	width:40%;
-	background:$lightblue;
 	padding:20px;
 	position:relative;
+}
+
+.sub {
+	width:100%;
+
 }
 
 @keyframes rotating {
@@ -374,9 +380,9 @@ input[type=submit]{
 	position:absolute;
 	width:3%;
 	animation: rotating 2s linear infinite;
-	width:12px;
-	top:26%;
-	left:10%;
+	width:3.5%;
+	top:47%;
+	left:8%;
 }
 
 .contact-form {

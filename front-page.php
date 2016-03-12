@@ -130,7 +130,7 @@
 	    </div>
 
 	    <div class="contact-image">
-	    	<div class="sub">
+	    	<div class="submarine">
 					<?php $image = get_field('contact_image');
 						if( !empty($image) ): ?>
 						<img class="sub" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
