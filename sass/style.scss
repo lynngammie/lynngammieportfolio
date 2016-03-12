@@ -165,6 +165,7 @@ i {
 	position:fixed;
 	transition:all 0.5s ease;
 	opacity:0.8;
+	display:none;
 	}
 	.grid-gallery1 {
 		bottom:-25%;
@@ -265,6 +266,10 @@ i {
 		margin-bottom:0;
 		font-size:1.8rem;
 	}
+}
+
+.plus, .minus {
+	display:none;
 }
 
 //portfolio section 
@@ -455,6 +460,53 @@ div.wpcf7-response-output {
 	i {
 		font-size: 1.6rem;
 	}
+}
+
+//Media Queries 
+
+@media (max-width: 840px) {
+	
+	.skills-items {
+		display:block;
+	}
+
+	.skills-other {
+		display:none;
+	}
+
+	.skills-item {
+		width:100%;
+		margin:20px 0;
+		.plus {
+			display:inline-block;
+		}
+		.minus {
+			display:none;
+		}
+	}
+
+	.plus, .minus {
+		float:right;
+	}
+
+	.active {
+		.minus {
+		display:inline-block;
+		}
+		.plus {
+			display:none;
+		}
+	}
+
+	.skills-active {
+		display:block;
+		transition:all 0.5s ease;
+	}
+
+
+
+
+
 }
 
 

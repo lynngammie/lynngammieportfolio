@@ -1,10 +1,22 @@
 $(function(){
 
-	$('.portfolio-masonryBLERP').masonry({
-  // options
-  itemSelector: '.portfolio-itemBLERP',
-  columnWidth: 200
-});
+	$('.skills-item').on('click', function(){
+		if (!$(this).hasClass('active')) {
+		$('.active').removeClass('active').find('.skills-other').slideUp();
+		$(this).toggleClass('active');
+		$(this).children().slideDown('slow');
+	} else {
+		$(this).removeClass('active');
+		$(this).find('.skills-other').slideUp();
+	}
+		
+		// if (!$(this).hasClass('active')) {
+		// 	$('.active').removeClass('active').next().slideUp();
+		// 	$(this).addClass('active').next().slideDown('slow');
+		// } else {
+		// 	$(this).removeClass('active').next().slideUp();
+		// }
+	});
 
 	$(window).scroll(function(event) {
 	    if ($(window).scrollTop()>=100) {$('.creatures').addClass('side-creatures');}
