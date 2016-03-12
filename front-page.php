@@ -109,8 +109,9 @@
     		
 				<?php $image = get_field('contact_image');
 					if( !empty($image) ): ?>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					<img class="sub" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 				<?php endif; ?>
+				<img class="prop" src="<?php the_field('contact_image_2'); ?>" alt="">
 
     	</div>
     	<div class="contact-text">

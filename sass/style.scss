@@ -124,34 +124,66 @@ i {
 
 //creature gallery styles
 
+.side-creatures {
+	background:blue;
+}
+
 .grid {
 	position:fixed;
-	display:none;
+	// display:none;
 }
 
-.grid-gallery1 {
-	width:30%;
-	bottom:0;
-	left:5%;
+.creatures {
+	.grid-gallery1, .grid-gallery2, .grid-gallery3, .grid-gallery4,  {
+	width:50%;
+	height:50%;
+	position:fixed;
+	transition:all 0.5s ease;
+	}
+	.grid-gallery1 {
+		bottom:-8%;
+		left:0;
+	}
+	.grid-gallery2 {
+		bottom:0;
+		right:0;
+	}
+	.grid-gallery3 {
+		top:0;
+		left:0;
+	}
+	.grid-gallery4 {
+		top:0;
+		right:0;
+	}
 }
 
-.grid-gallery2 {
-	width:30%;
-	bottom:0;
-	right:5%;
+.side-creatures {
+	.grid-gallery1, .grid-gallery2, .grid-gallery3, .grid-gallery4,  {
+	width:50%;
+	height:50%;
+	position:fixed;
+	transition:all 0.5s ease;
+	opacity:0.8;
+	}
+	.grid-gallery1 {
+		bottom:-25%;
+		left:-15%;
+	}
+	.grid-gallery2 {
+		bottom:-15%;
+		right:-15%;
+	}
+	.grid-gallery3 {
+		top:-15%;
+		left:-15%;
+	}
+	.grid-gallery4 {
+		top:-15%;
+		right:-15%;
+	}
 }
 
-.grid-gallery3 {
-	width:30%;
-	top:5%;
-	left:10%;
-}
-
-.grid-gallery4 {
-	width:32%;
-	top:5%;
-	right:20%;
-}
 
 // about section 
 
@@ -311,6 +343,24 @@ input[type=submit]{
 	width:40%;
 	background:$lightblue;
 	padding:20px;
+	position:relative;
+}
+
+@keyframes rotating {
+	from {
+		transform:rotateX(0deg);
+	}
+	to {
+		transform:rotateX(360deg);
+	}
+}
+.prop {
+	position:absolute;
+	width:3%;
+	animation: rotating 2s linear infinite;
+	width:12px;
+	top:26%;
+	left:10%;
 }
 
 .contact-form {
@@ -404,20 +454,6 @@ div.wpcf7-response-output {
 	}
 	i {
 		font-size: 1.6rem;
-	}
-}
-
-
-//footer 
-
-footer {
-	background:$blue;
-	p {
-		color:$brightyellow;
-		padding:20px;
-		font-size:1rem;
-		text-align:center;
-		margin:0;
 	}
 }
 

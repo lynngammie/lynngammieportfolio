@@ -6,6 +6,12 @@ $(function(){
   columnWidth: 200
 });
 
+	$(window).scroll(function(event) {
+	    if ($(window).scrollTop()>=100) {$('.creatures').addClass('side-creatures');}
+	    else {
+	    	$('.creatures').removeClass('side-creatures');}
+	});
+
 	//add class of display:inline to word-master word-gallery1 go and add 1 to the word-gallery name
 
 	var words = $(".word-master");

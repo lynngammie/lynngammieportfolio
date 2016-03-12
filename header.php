@@ -39,6 +39,7 @@
           <?php endif; ?>
         </span>
       </h2>
+      <div class="creatures">
       <?php if (get_field('grid_creatures')): ?>
       <?php $number = 1; $classnames = array(); ?>
       <?php while(the_repeater_field('grid_creatures')): ?>
@@ -47,7 +48,7 @@
         <?php $number++ ?>
       <?php endwhile; ?>
     <?php endif; ?>
-
+    </div>
     </div>
   </div>
 

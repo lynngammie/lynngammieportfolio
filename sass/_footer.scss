@@ -1,3 +1,24 @@
+$yellow: #FFA000;
+$brightyellow: #FFC107;
+$blue: #054459;
+$lightblue: #6697A2;
+$grey:#F8F8F8;
+$headerOverlay: rgba(2,27,35,0.8);
+$mainfont: 'Montserrat', sans-serif;
+$secondfont: 'Source Sans Pro', sans-serif;
+$footerfont: 'Cardo', serif;
+
 footer {
 	clear: both;
+}
+
+footer {
+	background:$blue;
+	p {
+		color:$brightyellow;
+		padding:20px;
+		font-size:1rem;
+		text-align:center;
+		margin:0;
+	}
 }
