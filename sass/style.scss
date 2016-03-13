@@ -35,6 +35,7 @@ img {
 
 body {
 	font-size:62.5%;
+	background:$grey;
 }
 
 //Header Styles
@@ -251,6 +252,8 @@ i {
 
 .skills-item {
 	width:30%;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background:white;
 	padding:20px;
 	border:4px solid $brightyellow;
 	.skills-text {
@@ -300,6 +303,8 @@ i {
 
 .portfolio-text {
 	width:40%;
+	background:white;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 	font-size:1.1rem;
 	padding:20px;
 	padding-right:30px;
@@ -553,8 +558,6 @@ div.wpcf7-response-output {
 		transition:all 0.5s ease;
 	}
 
-
-
 }
 
 
@@ -663,18 +666,9 @@ div.wpcf7-response-output {
 	}
 
 	.side-creatures {
-		.grid-gallery1 {
-			
-		}
 		.grid-gallery2 {
 			bottom:95%;
 			right:-6%;
-		}
-		.grid-gallery3 {
-			
-		}
-		.grid-gallery4 {
-			
 		}
 	}
 	
