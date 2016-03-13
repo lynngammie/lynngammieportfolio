@@ -40,10 +40,10 @@
         </span>
       </h2>
       <div class="creatures">
-      <?php if (get_field('grid_creatures')): ?>
+      <?php if (get_field('sea_creatures')): ?>
       <?php $number = 1; $classnames = array(); ?>
-      <?php while(the_repeater_field('grid_creatures')): ?>
-        <img class="grid grid-gallery<?= $number ?>" src="<?php the_sub_field('grid_creature'); ?>"></img>
+      <?php while(the_repeater_field('sea_creatures')): ?>
+        <img class="grid grid-gallery<?= $number ?>" src="<?php the_sub_field('sea_creature'); ?>"></img>
         <?php array_push($classnames, "grid-gallery".$number) ?>
         <?php $number++ ?>
       <?php endwhile; ?>

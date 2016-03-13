@@ -79,6 +79,7 @@ h1, h3, h4 {
 
 h1 {
 	font-size:3rem;
+	margin-top:0;
 }
 
 h2 {
@@ -135,53 +136,53 @@ i {
 
 .creatures {
 	.grid-gallery1, .grid-gallery2, .grid-gallery3, .grid-gallery4,  {
-	width:50%;
-	height:50%;
 	position:fixed;
-	transition:all 0.5s ease;
+	transition:all 0.8s ease;
 	}
 	.grid-gallery1 {
-		bottom:-8%;
-		left:0;
+		width:20%;
+		top:40px;
+		left:50px;
+		transform:rotate(20deg);
 	}
 	.grid-gallery2 {
-		bottom:0;
-		right:0;
+		width:18%;
+		right:160px;
+		bottom:75px;
 	}
 	.grid-gallery3 {
-		top:0;
-		left:0;
+		width:40%;
+		bottom:-30px;
+		right:-10px;
 	}
 	.grid-gallery4 {
-		top:0;
-		right:0;
+		width:40%;
+		bottom:-10px;
+		left:-25px;
 	}
 }
 
 .side-creatures {
 	.grid-gallery1, .grid-gallery2, .grid-gallery3, .grid-gallery4,  {
-	width:50%;
-	height:50%;
-	position:fixed;
-	transition:all 0.5s ease;
+	transition:all 0.8s ease;
 	opacity:0.8;
-	display:none;
+	z-index:1;
 	}
 	.grid-gallery1 {
-		bottom:-25%;
-		left:-15%;
+		top:-14%;
+		left:-10%;
 	}
 	.grid-gallery2 {
-		bottom:-15%;
-		right:-15%;
+		right:-5%;
+		bottom:86%;
 	}
 	.grid-gallery3 {
-		top:-15%;
-		left:-15%;
+		bottom:-11%;
+		right:-8%;
 	}
 	.grid-gallery4 {
-		top:-15%;
-		right:-15%;
+		bottom:-13%;
+		left:-8%;
 	}
 }
 
@@ -482,6 +483,35 @@ div.wpcf7-response-output {
 
 @media (max-width: 840px) {
 
+	.creatures {
+		.grid-gallery1 {
+			width:25%;
+			left:0;
+		}
+		.grid-gallery2 {
+			width:23%;
+			right:96px;
+			bottom:36px;
+		}
+	}
+
+	.side-creatures {
+		.grid-gallery1 {
+			left:-12%;
+			top:-10%;
+		}
+		.grid-gallery2 {
+			right:-5%;
+			bottom:86%;
+		}
+		.grid-gallery3 {
+			
+		}
+		.grid-gallery4 {
+			
+		}
+	}
+
 	.about-text {
 		width:90%;
 	}
@@ -522,6 +552,8 @@ div.wpcf7-response-output {
 		display:block;
 		transition:all 0.5s ease;
 	}
+
+
 
 }
 
@@ -571,6 +603,30 @@ div.wpcf7-response-output {
 
 @media (max-width: 621px) {
 
+	.creatures {
+		.grid-gallery3 {
+			width:50%;
+		}
+		.grid-gallery4 {
+			width:50%;
+		}
+	}
+
+	.side-creatures {
+		.grid-gallery1 {
+			top:-14%;
+		}
+		.grid-gallery2 {
+			bottom:93%;
+		}
+		.grid-gallery3 {
+			width:50%;
+		}
+		.grid-gallery4 {
+			width:50%;
+		}
+	}
+
 	.about {
 		display:block;
 	}
@@ -598,6 +654,29 @@ div.wpcf7-response-output {
 }
 
 @media (max-width: 480px) {
+
+	.creatures {
+		.grid-gallery2 {
+			right:60px;
+			bottom:18px;
+		}
+	}
+
+	.side-creatures {
+		.grid-gallery1 {
+			
+		}
+		.grid-gallery2 {
+			bottom:95%;
+			right:-6%;
+		}
+		.grid-gallery3 {
+			
+		}
+		.grid-gallery4 {
+			
+		}
+	}
 	
 	h4 {
 		font-size:1.4rem;
