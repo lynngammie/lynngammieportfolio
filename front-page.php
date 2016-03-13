@@ -74,7 +74,9 @@
     	    <?php $portfolioQuery->the_post(); ?>
     	    <div class="portfolio-item clearfix">
     	    	<div class="portfolio-text">
-	    	    	<h4><?php the_title(); ?></h4>
+    	    		<a href="<?php the_field('link')?>">
+	    	    		<h4><?php the_title(); ?></h4>
+	    	    	</a>
 	    	    	<p class="details">Details</p>
 	    	    	<p class="porfolio-text"><?php the_content(); ?></p>
     	    	</div>
