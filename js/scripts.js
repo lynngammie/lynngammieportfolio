@@ -1,6 +1,6 @@
 $(function(){
 
-	$('.skills-item').on('click', function(){
+	$('.skills-item-media').on('click', function(){
 		if (!$(this).hasClass('active')) {
 		$('.active').removeClass('active').find('.skills-other').slideUp();
 		$(this).toggleClass('active');

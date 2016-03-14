@@ -33,14 +33,25 @@
 	    	    <!-- what we want to show goes here -->
 	    	    <div class="skills-item">
 	    	    	<h4 class="skills-title"><?php the_title(); ?><span class="plus"> + </span><span class="minus"> - </span></h4>
-	    	    	<div class="skills-other">
-	    	    	<div class="logos">
-	    	    		<?php while(has_sub_field('skills_image')): ?>
-	    	      	<p><?php the_sub_field('skills_logo'); ?></p>
-	    	    		<?php endwhile ?>
+	    	    		<div class="skills-other">
+	    	    		<div class="logos">
+	    	    			<?php while(has_sub_field('skills_image')): ?>
+	    	      		<p><?php the_sub_field('skills_logo'); ?></p>
+	    	    			<?php endwhile ?>
 	    	    		</div>
-	    				<p class="skills-text"><?php the_content(); ?></p>
+	    					<p class="skills-text"><?php the_content(); ?></p>
+	    				</div>
 	    			</div>
+	    			<div class="skills-item-media">
+	    	    	<h4 class="skills-title"><?php the_title(); ?><span class="plus"> + </span><span class="minus"> - </span></h4>
+	    	    		<div class="skills-other">
+	    	    		<div class="logos">
+	    	    			<?php while(has_sub_field('skills_image')): ?>
+	    	      		<p><?php the_sub_field('skills_logo'); ?></p>
+	    	    			<?php endwhile ?>
+	    	    		</div>
+	    					<p class="skills-text"><?php the_content(); ?></p>
+	    				</div>
 	    			</div>
 	    	  	<?php endwhile; ?>
 	    	  <?php wp_reset_postdata(); ?>
