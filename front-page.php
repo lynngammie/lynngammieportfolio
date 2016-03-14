@@ -77,6 +77,7 @@
 
     	<?php $portfolioQuery = new WP_Query(array(
     	    'post_type' => 'portfolio',
+    	    'orderby' => 'title',
     	    'order' => 'ASC'
     	)); ?>
     	
